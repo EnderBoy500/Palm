@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "palm:palm_boat",
+    "minecraft:chest"
+  ],
+  "result": {
+    "count": 1,
+    "id": "palm:palm_chest_boat"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palm:block/stripped_coconut_brick_slab"
+    },
+    "type=double": {
+      "model": "palm:block/stripped_coconut_bricks"
+    },
+    "type=top": {
+      "model": "palm:block/stripped_coconut_brick_slab_top"
+    }
+  }
+}

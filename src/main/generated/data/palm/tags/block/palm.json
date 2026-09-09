@@ -1,0 +1,21 @@
+{
+  "values": [
+    "palm:palm_log",
+    "palm:stripped_palm_log",
+    "palm:palm_wood",
+    "palm:stripped_palm_wood",
+    "palm:palm_planks",
+    "palm:palm_stairs",
+    "palm:palm_slab",
+    "palm:palm_fence",
+    "palm:palm_fence_gate",
+    "palm:palm_button",
+    "palm:palm_pressure_plate",
+    "palm:palm_door",
+    "palm:palm_trapdoor",
+    "palm:palm_shelf",
+    "palm:palm_wall_sign",
+    "palm:palm_hanging_sign",
+    "palm:palm_wall_hanging_sign"
+  ]
+}

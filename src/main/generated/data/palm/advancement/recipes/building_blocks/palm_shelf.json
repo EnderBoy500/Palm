@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palm_shelf": {
+      "conditions": {
+        "items": [
+          {
+            "items": "palm:stripped_palm_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "palm:palm_shelf"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_palm_shelf"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "palm:palm_shelf"
+    ]
+  }
+}

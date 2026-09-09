@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "palm",
+	"version": "${version}",
+	"name": "Palm",
+	"description": "",
+	"authors": [
+		"Enderboy500",
+		"Ciph3rJ"
+	],
+	"license": "MIT",
+	"icon": "assets/palm/icon.png",
+	"environment": "*",
+	"accessWidener": "palm.accesswidener",
+	"entrypoints": {
+		"main": [
+			"io.github.enderboy500.palm.Palm"
+		],
+		"client": [
+			"io.github.enderboy500.palm.client.PalmClient"
+		],
+		"fabric-datagen": [
+			"io.github.enderboy500.palm.data.PalmDataGenerator"
+		]
+	},
+	"mixins": [
+		"palm.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

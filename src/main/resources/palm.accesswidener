@@ -1,0 +1,5 @@
+accessWidener v2 named
+accessible method net/minecraft/world/level/block/state/properties/WoodType register (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/world/level/block/state/properties/WoodType;
+
+accessible field net/minecraft/world/level/levelgen/feature/foliageplacers/FoliagePlacer radius Lnet/minecraft/util/valueproviders/IntProvider;
+accessible field net/minecraft/world/level/levelgen/feature/foliageplacers/FoliagePlacer offset Lnet/minecraft/util/valueproviders/IntProvider;

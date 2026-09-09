@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palm:block/coconut_brick_slab"
+    },
+    "type=double": {
+      "model": "palm:block/coconut_bricks"
+    },
+    "type=top": {
+      "model": "palm:block/coconut_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palm_boat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "palm:palm_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "palm:palm_boat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_palm_boat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "palm:palm_boat"
+    ]
+  }
+}

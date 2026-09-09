@@ -1,0 +1,20 @@
+// 1.21.11	-999999999-01-01T00:00:00	Palm/Tags for minecraft:block
+7d3e2524823b605318a00c4fdc08600ad59a3213 data/minecraft/tags/block/fence_gates.json
+3007b22dde05a62c56d9d365cd295801b3ea008e data/minecraft/tags/block/leaves.json
+66caf0c2e55860b5691e83f369c1e1464677243d data/minecraft/tags/block/logs.json
+2294e752766f6826d4844fd6d6122937f424b00a data/minecraft/tags/block/mineable/axe.json
+7ca4b94fd5e3408613bf34c5b9ae26ddb9f60c6b data/minecraft/tags/block/planks.json
+2684c588093bd06b82eb1bb3a72b45a849d0f2dc data/minecraft/tags/block/saplings.json
+456f322b5ead24b508d828a7260b0f8655ce329c data/minecraft/tags/block/slabs.json
+f304514c455992cc820e41faf825b5c117d5c1db data/minecraft/tags/block/stairs.json
+a7f6007f8d5b7aa9841a26d621d9a7ac80e3b3ad data/minecraft/tags/block/wooden_buttons.json
+e49483b1e6190e91c1b8d807024c085d7de6d70b data/minecraft/tags/block/wooden_doors.json
+0234f56632f2d9724b3d364005a4589900eb66e7 data/minecraft/tags/block/wooden_fences.json
+88168e270f1f35f1495f97ecf9e21c5077ecc21e data/minecraft/tags/block/wooden_pressure_plates.json
+b8f4f9e6621c281c4bae520e2ea99ce41486a18e data/minecraft/tags/block/wooden_shelves.json
+2e8fa0ac9646b58386f570d00eb295796d306eec data/minecraft/tags/block/wooden_slabs.json
+cd1099f6674ebad9ffaef08f31975c0cd82a1982 data/minecraft/tags/block/wooden_stairs.json
+3efb89b4a86341f20aa379546f07aad78d90b284 data/minecraft/tags/block/wooden_trapdoors.json
+51b365f321922c4da5869abf0cae96da24b8e91e data/palm/tags/block/coconut_placeables.json
+55e0265969338b778a34e9d432b8c789cc8f68e2 data/palm/tags/block/palm.json
+66caf0c2e55860b5691e83f369c1e1464677243d data/palm/tags/block/palm_logs.json

@@ -3,12 +3,17 @@
 	"id": "palm",
 	"version": "${version}",
 	"name": "Palm",
-	"description": "",
+	"description": "Palm trees and falling coconuts",
 	"authors": [
 		"Enderboy500",
 		"Ciph3rJ"
 	],
-	"license": "MIT",
+	"contact": {
+		"homepage": "https://modrinth.com/mod/palm",
+		"sources": "https://github.com/EnderBoy500/Palm",
+		"issues": "https://github.com/EnderBoy500/Issues/issues"
+	},
+	"license": "EBMC-1A",
 	"icon": "assets/palm/icon.png",
 	"environment": "*",
 	"accessWidener": "palm.accesswidener",
@@ -30,6 +35,7 @@
 		"fabricloader": "*",
 		"minecraft": "~1.21.11",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"cipherlib": "~1.0.3-1.21.11"
 	}
 }

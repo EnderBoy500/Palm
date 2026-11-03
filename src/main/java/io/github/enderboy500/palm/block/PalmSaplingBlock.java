@@ -3,6 +3,7 @@ package io.github.enderboy500.palm.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.grower.TreeGrower;
@@ -16,5 +17,11 @@ public class PalmSaplingBlock extends SaplingBlock {
     @Override
     protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
         return blockState.is(BlockTags.DIRT) || blockState.is(Blocks.FARMLAND) || blockState.is(BlockTags.SAND);
+    }
+
+    @Override
+    protected boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+        BlockPos blockPos2 = blockPos.below();
+        return this.mayPlaceOn(levelReader.getBlockState(blockPos2), levelReader, blockPos2);
     }
 }

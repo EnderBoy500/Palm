@@ -7,6 +7,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Blaze;
 import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
@@ -39,6 +40,13 @@ public class ThrownCoconut extends ThrowableItemProjectile {
         Entity entity = entityHitResult.getEntity();
         int i = 3;
         entity.hurt(this.damageSources().thrown(this, this.getOwner()), (float)i);
+    }
+
+    @Override
+    protected void onHitBlock(BlockHitResult blockHitResult) {
+        super.onHitBlock(blockHitResult);
+        ItemEntity item = new ItemEntity(this.level(), this.position().x, this.position().y, this.position().z, new ItemStack(PalmItems.HALF_COCONUT, 2));
+        this.level().addFreshEntity(item);
     }
 
     protected void onHit(HitResult hitResult) {

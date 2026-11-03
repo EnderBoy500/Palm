@@ -1,18 +1,13 @@
 package io.github.enderboy500.palm.block;
 
-import com.mojang.math.OctahedralGroup;
 import com.mojang.serialization.MapCodec;
-import io.github.enderboy500.palm.content.PalmBlocks;
-import io.github.enderboy500.palm.content.PalmDamageTypes;
 import io.github.enderboy500.palm.content.PalmItems;
-import io.github.enderboy500.palm.util.ModTags;
+import io.github.enderboy500.palm.content.PalmOtherRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
@@ -30,14 +25,10 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jspecify.annotations.Nullable;
-
-import java.util.List;
-import java.util.Map;
 
 public class CoconutBlock extends FallingBlock implements BonemealableBlock {
     public static final MapCodec<CoconutBlock> CODEC = simpleCodec(CoconutBlock::new);
@@ -138,7 +129,7 @@ public class CoconutBlock extends FallingBlock implements BonemealableBlock {
 
     protected boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
         BlockState blockState2 = levelReader.getBlockState(blockPos.relative((Direction)blockState.getValue(FACING).getOpposite()));
-        return blockState2.is(ModTags.COCONUT_PLACEABLES);
+        return blockState2.is(PalmOtherRegistries.COCONUT_PLACEABLES);
     }
 
     @Override
@@ -151,7 +142,7 @@ public class CoconutBlock extends FallingBlock implements BonemealableBlock {
     }
 
     public static boolean isFree(BlockState blockState) {
-        return !blockState.is(ModTags.COCONUT_PLACEABLES);
+        return !blockState.is(PalmOtherRegistries.COCONUT_PLACEABLES);
     }
 
     @Override
@@ -161,7 +152,7 @@ public class CoconutBlock extends FallingBlock implements BonemealableBlock {
 
     @Override
     public DamageSource getFallDamageSource(Entity entity) {
-        return entity.damageSources().source(PalmDamageTypes.COCONUT, entity);
+        return entity.damageSources().source(PalmOtherRegistries.COCONUT, entity);
     }
 
     @Override

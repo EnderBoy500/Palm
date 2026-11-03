@@ -1,6 +1,5 @@
 package io.github.enderboy500.palm.projectile;
 
-import io.github.enderboy500.palm.block.CoconutBlock;
 import io.github.enderboy500.palm.content.PalmBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
@@ -12,9 +11,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.throwableitemprojectile.Snowball;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
 import net.minecraft.world.level.Level;

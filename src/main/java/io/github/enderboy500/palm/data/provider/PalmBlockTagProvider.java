@@ -1,7 +1,7 @@
 package io.github.enderboy500.palm.data.provider;
 
 import io.github.enderboy500.palm.content.PalmBlocks;
-import io.github.enderboy500.palm.util.ModTags;
+import io.github.enderboy500.palm.content.PalmOtherRegistries;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -17,7 +17,7 @@ public class PalmBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider wrapperLookup) {
-        valueLookupBuilder(ModTags.PALM)
+        valueLookupBuilder(PalmOtherRegistries.PALM)
                 .add(PalmBlocks.PALM_LOG, PalmBlocks.STRIPPED_PALM_LOG, PalmBlocks.PALM_WOOD, PalmBlocks.STRIPPED_PALM_WOOD, PalmBlocks.PALM_PLANKS,
                         PalmBlocks.PALM_STAIRS, PalmBlocks.PALM_SLABS, PalmBlocks.PALM_FENCE, PalmBlocks.PALM_FENCE_GATE, PalmBlocks.PALM_BUTTON,
                         PalmBlocks.PALM_PRESSURE_PLATE, PalmBlocks.PALM_DOOR, PalmBlocks.PALM_TRAPDOOR, PalmBlocks.PALM_SHELF, PalmBlocks.PALM_WALL_SIGN,
@@ -25,15 +25,15 @@ public class PalmBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
 
         valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
-                .addTag(ModTags.PALM)
+                .addTag(PalmOtherRegistries.PALM)
                 .add(PalmBlocks.COCONUT_BRICK_STAIRS)
                 .add(PalmBlocks.STRIPPED_COCONUT_BRICK_STAIRS)
                 .add(PalmBlocks.COCONUT_BRICK_SLAB)
                 .add(PalmBlocks.STRIPPED_COCONUT_BRICK_SLAB)
         ;
 
-        valueLookupBuilder(ModTags.PALM_LOGS).add(PalmBlocks.PALM_LOG, PalmBlocks.STRIPPED_PALM_LOG);
-        valueLookupBuilder(ModTags.COCONUT_PLACEABLES).addTag(ModTags.PALM_LOGS).add(PalmBlocks.STRIPPED_PALM_WOOD, PalmBlocks.PALM_WOOD);
+        valueLookupBuilder(PalmOtherRegistries.PALM_LOGS).add(PalmBlocks.PALM_LOG, PalmBlocks.STRIPPED_PALM_LOG);
+        valueLookupBuilder(PalmOtherRegistries.COCONUT_PLACEABLES).addTag(PalmOtherRegistries.PALM_LOGS).add(PalmBlocks.STRIPPED_PALM_WOOD, PalmBlocks.PALM_WOOD);
 
         valueLookupBuilder(BlockTags.STAIRS).add(PalmBlocks.COCONUT_BRICK_STAIRS).add(PalmBlocks.STRIPPED_COCONUT_BRICK_STAIRS);
         valueLookupBuilder(BlockTags.SLABS).add(PalmBlocks.COCONUT_BRICK_SLAB).add(PalmBlocks.STRIPPED_COCONUT_BRICK_SLAB);

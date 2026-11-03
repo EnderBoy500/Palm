@@ -41,8 +41,8 @@ public class PalmTreeFeatures {
     public static void load() {}
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> bootstrapContext) {
-        register(bootstrapContext, PALM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(PalmBlocks.PALM_LOG), new PalmTrunkPlacer(6,2,2), BlockStateProvider.simple(PalmBlocks.PALM_LEAVES), new PalmFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), false), new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.SAND)).build());
-        register(bootstrapContext, BEACH_PALM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(PalmBlocks.PALM_LOG), new PalmTrunkPlacer(6,2,2), BlockStateProvider.simple(PalmBlocks.PALM_LEAVES), new PalmFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), true), new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.SAND)).build());
+        register(bootstrapContext, PALM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(PalmBlocks.PALM_LOG), new PalmTrunkPlacer(6,2,2), BlockStateProvider.simple(PalmBlocks.PALM_LEAVES), new PalmFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), false), new TwoLayersFeatureSize(1, 0, 2)).build());
+        register(bootstrapContext, BEACH_PALM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(PalmBlocks.PALM_LOG), new PalmTrunkPlacer(6,2,2), BlockStateProvider.simple(PalmBlocks.PALM_LEAVES), new PalmFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), true), new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

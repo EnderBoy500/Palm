@@ -39,6 +39,8 @@
   "block.palm.stripped_coconut_brick_stairs": "Stripped Coconut Brick Stairs",
   "block.palm.stripped_coconut_brick_slab": "Stripped Coconut Brick Slab",
 
+  "entity.palm.coconut": "Coconut",
+
   "death.attack.coconut": "A coconut fell on %1$s's head",
   "death.attack.coconut.player": "A coconut fell on %1$s's head while trying to escape %2$s"
 }

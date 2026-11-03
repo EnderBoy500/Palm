@@ -1,16 +1,16 @@
 package io.github.enderboy500.palm;
 
-import io.github.ciph3rj.cipherlib.Cipher;
 import io.github.enderboy500.palm.content.*;
-import io.github.enderboy500.palm.util.ModTags;
+import io.github.enderboy500.palm.content.PalmOtherRegistries;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.SharedConstants;
 import net.minecraft.resources.Identifier;
 
+import net.minecraft.world.entity.npc.villager.VillagerTrades;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import org.slf4j.Logger;
@@ -24,20 +24,16 @@ public class Palm implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing Palm");
-
-		Cipher.addModId(MOD_ID);
-
 		PalmBlocks.load();
 
 		PalmEntities.load();
-		PalmDamageTypes.load();
 
 		PalmItems.load();
 		PalmCreativeModeTabModifiers.load();
 
 		PalmWorldGenModifications.load();
 
-		ModTags.load();
+		PalmOtherRegistries.load();
 
 		DispenserBlock.registerProjectileBehavior(PalmItems.COCONUT);
 
@@ -64,6 +60,13 @@ public class Palm implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(PalmBlocks.PALM_SHELF, 20, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(PalmBlocks.PALM_LEAVES, 20, 5);
 
+		TradeOfferHelper.registerWanderingTraderOffers(wanderingTraderOffersBuilder -> {
+			wanderingTraderOffersBuilder.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL, new VillagerTrades.ItemsForEmeralds(
+					PalmBlocks.PALM_LOG, 1, 8, 4, 1));
+			wanderingTraderOffersBuilder.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_COMMON_ITEMS_POOL, new VillagerTrades.ItemsForEmeralds(
+					PalmItems.COCONUT, 2, 4, 8, 1));
+		});
+
 		FuelRegistryEvents.BUILD.register(((builder, context) -> {
 			builder.add(PalmBlocks.PALM_LOG, 300);
 			builder.add(PalmBlocks.STRIPPED_PALM_LOG, 300);
@@ -79,6 +82,8 @@ public class Palm implements ModInitializer {
 			builder.add(PalmItems.PALM_BOAT, 1200);
 			builder.add(PalmItems.PALM_CHEST_BOAT, 1200);
 		}));
+
+		LOGGER.info("Finished Initializing Palm");
 	}
 
 	public static Identifier id(String path) {

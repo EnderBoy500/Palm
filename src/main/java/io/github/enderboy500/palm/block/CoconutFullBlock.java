@@ -1,32 +1,17 @@
 package io.github.enderboy500.palm.block;
 
 import com.mojang.serialization.MapCodec;
-import io.github.enderboy500.palm.content.PalmDamageTypes;
-import io.github.enderboy500.palm.util.ModTags;
+import io.github.enderboy500.palm.content.PalmOtherRegistries;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.pathfinder.PathComputationType;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jspecify.annotations.Nullable;
 
 public class CoconutFullBlock extends FallingBlock{
     public static final MapCodec<CoconutFullBlock> CODEC = simpleCodec(CoconutFullBlock::new);
@@ -62,7 +47,7 @@ public class CoconutFullBlock extends FallingBlock{
 
     @Override
     public DamageSource getFallDamageSource(Entity entity) {
-        return entity.damageSources().source(PalmDamageTypes.COCONUT, entity);
+        return entity.damageSources().source(PalmOtherRegistries.COCONUT, entity);
     }
 
     @Override

@@ -1,5 +1,5 @@
 // 1.21.11	-999999999-01-01T00:00:00	Palm/
-d98b30fd9c487da029561df51a328f0926f5bb86 data/palm/worldgen/configured_feature/coconut_palm.json
-6f92d1295a67ad688a17e7bb029a54ff4a29eb5f data/palm/worldgen/configured_feature/palm.json
-cb621143e4e2a0490855f6a8a0792e9d198d9378 data/palm/worldgen/placed_feature/coconut_palm_tree.json
-073057208ba46b9f71b61b6b3da8b0363cd261a6 data/palm/worldgen/placed_feature/palm_tree.json
+c194a14b0bf03da73ec50b5ef65371759f3fb30b data/palm/worldgen/configured_feature/coconut_palm.json
+d2eae93e4ecda85e1a818be70091fd79c9433da2 data/palm/worldgen/configured_feature/palm.json
+3cd58ccc3f0a6200a5686192b7682337e99450bb data/palm/worldgen/placed_feature/coconut_palm_tree.json
+2a582c071d1a5706be82412cf7f30064580b35eb data/palm/worldgen/placed_feature/palm_tree.json

@@ -1,9 +1,9 @@
 package io.github.enderboy500.palm.data.generator;
 
-import io.github.ciph3rj.cipherlib.helper.CipherLibRecipeGenerator;
 import io.github.enderboy500.palm.content.PalmBlocks;
 import io.github.enderboy500.palm.content.PalmItems;
-import io.github.enderboy500.palm.util.ModTags;
+import io.github.enderboy500.palm.content.PalmOtherRegistries;
+import net.enderboy500.enderlib.data.ERecipeGenerator;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -13,7 +13,7 @@ import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
-public class PalmRecipeGenerator extends CipherLibRecipeGenerator {
+public class PalmRecipeGenerator extends ERecipeGenerator {
     public PalmRecipeGenerator(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
         super(provider, recipeOutput);
     }
@@ -27,7 +27,7 @@ public class PalmRecipeGenerator extends CipherLibRecipeGenerator {
         woodFromLogs(PalmBlocks.PALM_WOOD, PalmBlocks.PALM_LOG);
         woodFromLogs(PalmBlocks.STRIPPED_PALM_WOOD, PalmBlocks.STRIPPED_PALM_LOG);
         offerBoatRecipes(PalmBlocks.PALM_PLANKS, PalmItems.PALM_BOAT, PalmItems.PALM_CHEST_BOAT);
-        planksFromLogs(PalmBlocks.PALM_PLANKS, ModTags.PALM_PLANK_INGREDIENT, 4);
+        planksFromLogs(PalmBlocks.PALM_PLANKS, PalmOtherRegistries.PALM_PLANK_INGREDIENT, 4);
         fence(PalmBlocks.PALM_PLANKS, PalmBlocks.PALM_FENCE);
         this.shaped(RecipeCategory.REDSTONE, PalmBlocks.PALM_FENCE_GATE).define('#', Items.STICK).define('W', PalmBlocks.PALM_PLANKS).pattern("#W#").pattern("#W#")
                 .unlockedBy(getHasName(PalmBlocks.PALM_FENCE_GATE), has(PalmBlocks.PALM_PLANKS)).save(output);
